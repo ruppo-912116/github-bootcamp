@@ -3,6 +3,6 @@ chowmein
 biryani
 mission impossible: ghost protocol
 resident evil: afterlife
-tenet
+stranger things series
 chnged to check on upstream sets
 checking if the remote tracking branch can track this modifications
