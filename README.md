@@ -49,3 +49,6 @@ Rather than simply outputting the key that git would store our object under, we 
 ``` git cat-file -p <object-hash> ```
 now that we have data stored in our git object database, we can try retrieving it using the git cat-file command.
 the -p option helps to print out the output to the terminal.
+
+### Git object: blobs
+Git blobs (binary large object) are the object type Git uses to store the contents of files in a given repository. Blobs don't even include the filenames of each file or any other data. They just store the contents of a file.
