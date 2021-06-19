@@ -23,7 +23,7 @@ HEAD points to a particular references.
 
 ## The Ins and Outs of Stashing
 git stash pop removes the content from the stash. git stash apply does not remove the content from the stash thus the unstaged and the staged content or change in the stash can be applied to the different files.
-git stash apply stash@{1}----> used for referencing a specific stashed content from the stash stack (here stash@{1})
+``` git stash apply stash@{1} ``` ----> used for referencing a specific stashed content from the stash stack (here stash@{1})
 
 
 ## Centralized workflows
@@ -32,15 +32,15 @@ The simplest collaborative workflow is to have everyone work on the master branc
 ## Hashing and objects
 Git stores the data in key value pairs. the key being the hash of the data. it is a key-value data store. we can insert any kind of content in the git repository and git will hand us back a unique key we can later use to retrieve that content.
 
-git hash-object <File>
+```git hash-object <File>```
 The git hash-object command takes some data, stores in out .git/objects directory and gives us back the unique SHA-1 hash that refers to that data object.
 In the simplest for, git simply takes some content and returns the unique key that would be used to store our object. But it does not actually store anything.
 
-echo "hello" | git hash-object --stdin
+```echo "hello" | git hash-object --stdin```
 The --stdin option tells git hash-object to use the content from stdin rather than a file. In our example, it will hash the word "hello".
 The echo command simply repeats whatever we tell it to repeat to the terminal. We pipe the output of echo to git hash-object.
 
-echo "hello" | git hash-object --stdin -w
+```echo "hello" | git hash-object --stdin -w```
 Rather than simply outputting the key that git would store our object under, we can use the -w option to tell git to actually write the object to the database. After running this command, check out the contents of .git/objects.
 
 ``` git cat-file -p <object-hash> ```
