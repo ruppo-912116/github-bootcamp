@@ -43,6 +43,6 @@ The echo command simply repeats whatever we tell it to repeat to the terminal. W
 echo "hello" | git hash-object --stdin -w
 Rather than simply outputting the key that git would store our object under, we can use the -w option to tell git to actually write the object to the database. After running this command, check out the contents of .git/objects.
 
-git cat-file -p <object-hash>
+``` git cat-file -p <object-hash> ```
 now that we have data stored in our git object database, we can try retrieving it using the git cat-file command.
 the -p option helps to print out the output to the terminal.
