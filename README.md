@@ -62,3 +62,12 @@ Trees are Git object used to store the contents of a directory. Each tree contai
 | tree     | 2bb1..      | images   |
 | blob | 1f4b..      |    README.md |
 
+
+## Git reflogs
+git keeps a record of when the tips of branches and other references were updated in the repo. we can view and update these reference logs using the git reflog command.
+The git reflog command accepts subcommands show, expire, delete and exists. Show is the only commonly used variant and it is the default subcommand.
+``` git reflog show ``` will show the log of a specific reference (it defaults to HEAD). for example, to view the logs for the tip of the main branch we could run ``` git reflog show main ```.
+``` git reflog master@{one.week.ago} ```
+``` git checkout bugfix@{2.days.ago}```
+```git diff main@{0} main@{yesterday}```
+
